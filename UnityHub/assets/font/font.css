@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Constructio Grotesk';
+    font-style: normal;
+    font-weight: normal;
+    src: url('Constructio-Grotesk.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: normal;
+    src: url('SVNGilroy.woff') format('woff');
+}
