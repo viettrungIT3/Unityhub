@@ -1,3 +1,40 @@
+/* 
+# font
+*/
+@font-face {
+    font-family: 'Constructio Grotesk';
+    src: url('../fonts/DFVN Constructio Grotesk.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'SVN-Gilroy';
+    src: url('../fonts/Font SVN Gilroy/SVN-Gilroy Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SVN-Gilroy';
+    src: url('../fonts/Font SVN Gilroy/SVN-Gilroy Italic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'SVN-Gilroy';
+    src: url('../fonts/Font SVN Gilroy/SVN-Gilroy Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SVN-Gilroy';
+    src: url('../fonts/Font SVN Gilroy/SVN-Gilroy Bold Italic.otf') format('opentype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -6,7 +43,7 @@
 }
 
 body {
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Constructio Grotesk', sans-serif;
     color: #fff;
     background-color: #000A39;
 }
@@ -27,7 +64,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Nunito", sans-serif;
+    font-family: "Constructio Grotesk", sans-serif;
 }
 
 /*--------------------------------------------------------------
@@ -162,7 +199,7 @@ section {
     align-items: center;
     justify-content: space-between;
     padding: 10px 0 10px 65px;
-    font-family: "Nunito", sans-serif;
+    font-family: "Constructio Grotesk", sans-serif;
     font-size: 16pt;
     font-weight: 700;
     color: #fff;
@@ -347,6 +384,8 @@ section {
     background-size: 85% 2px;
     padding-bottom: 11px;
     padding-top: 62px;
+    font-size: 48px;
+    font-weight: 400;
 }
 
 .about p {
@@ -354,11 +393,33 @@ section {
     line-height: 24px;
     padding-top: 70px;
     font-size: 16px;
+
+    font-family: SVN-Gilroy;
+    font-size: 16px;
+    font-weight: 400;
+
 }
 
 /*--------------------------------------------------------------
 # Features
 --------------------------------------------------------------*/
+.features .section-header {
+    text-align: left;
+    padding-bottom: 0;
+}
+
+.features .h1-title {
+    background: url(../img/line.png) bottom left no-repeat;
+    background-size: 45% 2px;
+    padding-bottom: 11px;
+
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 67px;
+    letter-spacing: 0.1em;
+    text-align: left;
+}
+
 .features .feature-box {
     padding: 24px 20px;
     box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08);
