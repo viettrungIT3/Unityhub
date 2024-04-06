@@ -1,0 +1,179 @@
+.our-team {
+    .container {
+        .section-header {
+            .title {
+                font-family: "Constructio Grotesk";
+                font-size: 48px;
+                font-weight: 400;
+                line-height: 67px;
+                letter-spacing: 0.1em;
+            }
+            margin-bottom: 40px;
+        }
+
+        .box {
+            background: transparent;
+            padding-top: 25px;
+            padding-left: 30px;
+            position: relative;
+
+            &:hover {
+                transform: scale(1);
+                box-shadow: none;
+            }
+
+            .featured {
+                --border-color: none;
+                --border-width: 0;
+                --curve-size: 15px;
+                --blur: 30px;
+                --bg: #00b0f0;
+                --color: #ffffff;
+                color: var(--color);
+                /* use position: relative; so that BG is only for .featured */
+
+                position: absolute;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                padding: 4px 8px;
+                isolation: isolate;
+                display: inline-grid;
+                place-content: center;
+                font-family: Constructio Grotesk;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 67px;
+                letter-spacing: 0.1em;
+                text-align: center;
+                min-width: 191px;
+                min-height: 56px;
+
+                border: 0;
+                text-transform: uppercase;
+                clip-path: polygon(
+                    0% 0%,
+                    calc(100% - var(--curve-size)) 0%,
+                    100% var(--curve-size),
+                    100% 100%,
+                    var(--curve-size) 100%,
+                    0 calc(100% - var(--curve-size))
+                );
+                transition: color 250ms;
+            }
+
+            .featured::after,
+            .featured::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+            }
+
+            .featured::before {
+                background: var(--border-color);
+                background-size: 300% 300%;
+                z-index: -2;
+            }
+
+            .featured::after {
+                background: var(--bg);
+                z-index: -1;
+                clip-path: polygon(
+                    /* Top-left */ var(--border-width) calc(var(--curve-size) + var(--border-width) * 0.5),
+                    calc(var(--curve-size) + var(--border-width) * 0.5) var(--border-width),
+                    /* top-right */ calc(100% - var(--border-width)) var(--border-width),
+                    calc(100% - var(--border-width)) calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+                    /* bottom-right 1 */ calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+                        calc(100% - var(--border-width)),
+                    /* bottom-right 2 */ var(--border-width) calc(100% - var(--border-width))
+                );
+                transition: clip-path 500ms;
+            }
+
+            .featured:where(:hover, :focus)::after {
+                clip-path: polygon(
+                    /* Top-left */ calc(100% - var(--border-width))
+                        calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+                    calc(100% - var(--border-width)) var(--border-width),
+                    /* top-right */ calc(100% - var(--border-width)) var(--border-width),
+                    calc(100% - var(--border-width)) calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+                    /* bottom-right 1 */ calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+                        calc(100% - var(--border-width)),
+                    /* bottom-right 2 */ calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+                        calc(100% - var(--border-width))
+                );
+                transition: 200ms;
+            }
+
+            .featured:where(:hover, :focus) {
+                color: #fff;
+            }
+
+            .member-img {
+                width: 336.67px;
+                height: 500.5px;
+
+                .img-fluid {
+                    clip-path: polygon(100% 100%, 100% 100%, 100% 11.54%, 82.93% 0%, 0% 0%, 0% 88.46%, 17.66% 100%);
+                }
+            }
+
+            .member-info {
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                transform: translate(-50%, -100%);
+                padding: 0;
+                padding-bottom: 24px;
+                z-index: 2;
+
+                .member-info--title {
+                    font-family: Constructio Grotesk;
+                    font-size: 36px;
+                    font-weight: 400;
+                    line-height: 67px;
+                    letter-spacing: 0.05em;
+                    text-align: center;
+
+                    color: #ffffff;
+                }
+
+                .socials {
+                    display: flex;
+                    justify-content: center;
+                    text-align: center;
+                    gap: 16px;
+
+                    img {
+                        width: 40px;
+                        height: 40px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+    overflow: hidden; /* Ensures the cut corners are not visible outside the container */
+}
+
+.image-container img {
+    display: block; /* Removes bottom space/gap under the image */
+    width: 100%; /* Adjust based on your needs */
+    height: auto; /* Adjust based on your needs */
+    z-index: 1; /* Ensures the image is at the bottom layer */
+    position: relative;
+}
+
+.gradient-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 50%; /* Adjust this to control where the gradient starts */
+    background: linear-gradient(179.99deg, rgba(0, 176, 240, 0) 0.29%, #00b0f0 91.11%, #00b0f0 91.12%);
+    z-index: 2; /* Ensures the gradient is above the image but below the cut corners */
+}
