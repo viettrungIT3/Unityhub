@@ -1,0 +1,36 @@
+.ct-portfolio {
+    .container {
+        .section-header {
+            margin: 0 auto;
+            text-align: center;
+            .h1-title {
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: url(../img/line.png) bottom center no-repeat;
+                background-size: 85% 2px;
+                padding-bottom: 11px;
+                font-family: "Constructio Grotesk";
+                font-size: 48px;
+                font-weight: 400;
+                line-height: 67px;
+                letter-spacing: 0.1em;
+                color: #fff;
+                width: fit-content;
+            }
+        }
+
+        img {
+            width: 150px;
+            height: 125px;
+        }
+
+        span.text-50-plus {
+            font-family: 'SVN-Gilroy';
+            font-size: 70px;
+            font-weight: 900;
+            line-height: 73.5px;
+            text-align: left;
+        }
+    }
+}
