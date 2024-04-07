@@ -200,19 +200,18 @@
             disableOnInteraction: true
         },
         slidesPerView: 'auto',
-        pagination: {
-            el: '.swiper-pagination',
-            type: 'bullets',
-            clickable: true
+        navigation: {
+          nextEl: '.ct-swiper-button-next',
+          prevEl: '.ct-swiper-button-prev',
         },
         breakpoints: {
             320: {
                 slidesPerView: 1,
-                spaceBetween: 40
+                spaceBetween: 0
             },
-
-            1200: {
+            992: {
                 slidesPerView: 3,
+                spaceBetween: 0
             }
         }
     });

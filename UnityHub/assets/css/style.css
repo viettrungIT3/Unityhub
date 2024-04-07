@@ -42,10 +42,15 @@
     scroll-behavior: smooth;
 }
 
+html {
+    font-size: 62.5%;
+}
+
 body {
     font-family: 'Constructio Grotesk', sans-serif;
     color: #fff;
     background-color: #000A39;
+    font-size: 1.6rem;
 }
 
 a {
@@ -81,29 +86,28 @@ section {
 }
 
 .section-header h2 {
-    font-size: 13px;
-    letter-spacing: 1px;
-    font-weight: 700;
-    margin: 0;
-    color: #4154f1;
-    text-transform: uppercase;
+    color: #fff;
+    font-family: "Constructio Grotesk";
+    font-size: 4.8rem;
+    font-weight: 400;
+    line-height: 6.7rem;
+    letter-spacing: 0.1em;
+    text-align: left;
 }
 
 .section-header h2.title {
     margin: 0;
     padding: 0;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
     background: url(../img/line.png) bottom center no-repeat;
     background-size: 85% 2px;
     padding-bottom: 11px;
-    margin: 0;
+    width: fit-content;
+
     color: #fff;
     font-family: "Constructio Grotesk";
-    font-size: 48px;
+    font-size: 4.8rem;
     font-weight: 400;
-    line-height: 67px;
+    line-height: 6.7rem;
     letter-spacing: 0.1em;
     text-align: left;
 
@@ -113,7 +117,7 @@ section {
 .section-header p {
     margin: 10px 0 0 0;
     padding: 0;
-    font-size: 38px;
+    font-size: 3.8rem;
     line-height: 42px;
     font-weight: 700;
     color: #012970;
@@ -121,7 +125,7 @@ section {
 
 @media (max-width: 768px) {
     .section-header p {
-        font-size: 28px;
+        font-size: 2.8rem;
         line-height: 32px;
     }
 }
@@ -144,7 +148,7 @@ section {
 }
 
 .back-to-top i {
-    font-size: 24px;
+    font-size: 2.4rem;
     color: #fff;
     line-height: 0;
 }
@@ -199,7 +203,7 @@ section {
   * Desktop Navigation 
   */
 .navbar {
-    padding-right: 10%;
+    padding-right: 0;
 }
 
 .navbar ul {
@@ -222,7 +226,7 @@ section {
     justify-content: space-between;
     padding: 10px 0 10px 65px;
     font-family: "Constructio Grotesk", sans-serif;
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 400;
     color: #fff;
     white-space: nowrap;
@@ -231,7 +235,7 @@ section {
 
 .navbar a i,
 .navbar a:focus i {
-    font-size: 12px;
+    font-size: 1.2rem;
     line-height: 0;
     margin-left: 5px;
 }
@@ -248,7 +252,7 @@ section {
   */
 .mobile-nav-toggle {
     color: #fff;
-    font-size: 32px;
+    font-size: 3.2rem;
     cursor: pointer;
     display: none;
     line-height: 0;
@@ -307,7 +311,7 @@ section {
 .navbar-mobile a,
 .navbar-mobile a:focus {
     padding: 10px 20px;
-    font-size: 15px;
+    font-size: 1.5rem;
     color: #012970;
 }
 
@@ -331,19 +335,34 @@ section {
 
 .hero h1 {
     margin: 0;
-    font-size: 58px;
-    font-weight: 700;
+    font-family: Constructio Grotesk;
+    font-size: 5.6rem;
+    font-weight: 400;
+    line-height: 6.7rem;
+    letter-spacing: 0.1em;
+    text-align: left;
     color: #119FF4;
 }
 
 .hero h2 {
     color: #fff;
-    margin: 10px 0;
+    font-family: Constructio Grotesk;
+    font-size: 3.6rem;
+    font-weight: 400;
+    line-height: 6.7rem;
+    letter-spacing: 0.1em;
+    text-align: left;
+
 }
 
 .hero h3 {
     color: #fff;
-    margin: 10px 0;
+    font-family: Constructio Grotesk;
+    font-size: 3.2rem;
+    font-weight: 400;
+    line-height: 6.7rem;
+    letter-spacing: 0.1em;
+    text-align: left;
 }
 
 @media (min-width: 1024px) {
@@ -368,13 +387,13 @@ section {
         text-align: center;
     }
 
-    .hero h1 {
-        font-size: 32px;
+    /* .hero h1 {
+        font-size: 3.2rem;
     }
 
     .hero h2 {
-        font-size: 24px;
-    }
+        font-size: 2.4rem;
+    } */
 }
 
 .section-1 {
@@ -400,12 +419,13 @@ section {
 }
 
 @media (max-width: 768px) {
-    .about .content{
-        padding:0 40px;
+    .about .content {
+        padding: 20px 40px;
         text-align: justify;
     }
-    .about .content > h1 {
-        font-size: 32px;
+
+    .about .content>h1 {
+        font-size: 3.2rem;
     }
 }
 
@@ -419,13 +439,15 @@ section {
 @media (max-width: 480px) {
     .about .content {
         height: auto;
-        padding:0 12px;
+        padding: 0 12px;
         text-align: justify;
     }
-    .about .content > h1 {
-        font-size: 26px;
+
+    .about .content>h1 {
+        font-size: 2.6rem;
     }
 }
+
 .about .h1-title {
     position: absolute;
     left: 50%;
@@ -434,20 +456,29 @@ section {
     background-size: 85% 2px;
     padding-bottom: 11px;
     padding-top: 62px;
-    font-size: 48px;
+
+    font-family: Constructio Grotesk;
+    font-size: 4.8rem;
     font-weight: 400;
+    line-height: 6.7rem;
+    letter-spacing: 0.1em;
+    text-align: left;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .about p {
     margin: 15px 0 30px 0;
     line-height: 24px;
     padding-top: 70px;
-    font-size: 16px;
 
     font-family: SVN-Gilroy;
     font-size: 16px;
     font-weight: 400;
-
+    line-height: 22px;
+    letter-spacing: 0.05em;
+    text-align: center;
 }
 
 /*--------------------------------------------------------------
@@ -463,7 +494,7 @@ section {
     background-size: 45% 2px;
     padding-bottom: 11px;
 
-    font-size: 48px;
+    font-size: 4.8rem;
     font-weight: 400;
     line-height: 67px;
     letter-spacing: 0.1em;
@@ -478,7 +509,7 @@ section {
 }
 
 .features .feature-box h3 {
-    font-size: 18px;
+    font-size: 1.8rem;
     color: #012970;
     font-weight: 700;
     margin: 0;
@@ -489,7 +520,7 @@ section {
     background: #ecf3ff;
     padding: 4px;
     margin-right: 10px;
-    font-size: 24px;
+    font-size: 2.4rem;
     border-radius: 3px;
     transition: 0.3s;
 }
@@ -506,13 +537,13 @@ section {
 .features .feture-tabs h3 {
     color: #012970;
     font-weight: 700;
-    font-size: 32px;
+    font-size: 3.2rem;
     margin-bottom: 10px;
 }
 
 @media (max-width: 768px) {
     .features .feture-tabs h3 {
-        font-size: 28px;
+        font-size: 2.8rem;
     }
 }
 
@@ -523,7 +554,7 @@ section {
 .features .feture-tabs .nav-link {
     background: none;
     text-transform: uppercase;
-    font-size: 15px;
+    font-size: 1.5rem;
     font-weight: 600;
     color: #012970;
     padding: 12px 0;
@@ -538,14 +569,14 @@ section {
 }
 
 .features .feture-tabs .tab-content h4 {
-    font-size: 18px;
+    font-size: 1.8rem;
     margin: 0;
     font-weight: 700;
     color: #012970;
 }
 
 .features .feture-tabs .tab-content i {
-    font-size: 24px;
+    font-size: 2.4rem;
     line-height: 0;
     margin-right: 8px;
     color: #4154f1;
@@ -558,14 +589,14 @@ section {
 .features .feature-icons h3 {
     color: #012970;
     font-weight: 700;
-    font-size: 32px;
+    font-size: 3.2rem;
     margin-bottom: 20px;
     text-align: center;
 }
 
 @media (max-width: 768px) {
     .features .feature-icons h3 {
-        font-size: 28px;
+        font-size: 2.8rem;
     }
 }
 
@@ -574,21 +605,21 @@ section {
 }
 
 .features .feature-icons .content .icon-box h4 {
-    font-size: 20px;
+    font-size: 2.0rem;
     font-weight: 700;
     margin: 0 0 10px 0;
     color: #012970;
 }
 
 .features .feature-icons .content .icon-box i {
-    font-size: 44px;
+    font-size: 4.4rem;
     line-height: 44px;
     color: #0245bc;
     margin-right: 15px;
 }
 
 .features .feature-icons .content .icon-box p {
-    font-size: 15px;
+    font-size: 1.5rem;
     color: #848484;
 }
 
@@ -617,7 +648,6 @@ section {
     bottom: 0;
     height: 100%;
     width: 100%;
-    background: url(../img/team-shape.svg) no-repeat center bottom;
     background-size: contain;
     z-index: 1;
 }
@@ -647,7 +677,7 @@ section {
 }
 
 .team .member .social i {
-    font-size: 18px;
+    font-size: 1.8rem;
 }
 
 .team .member .member-info {
@@ -657,20 +687,20 @@ section {
 .team .member .member-info h4 {
     font-weight: 700;
     margin-bottom: 5px;
-    font-size: 20px;
+    font-size: 2.0rem;
     color: #012970;
 }
 
 .team .member .member-info span {
     display: block;
-    font-size: 14px;
+    font-size: 1.4rem;
     font-weight: 400;
     color: #aaaaaa;
 }
 
 .team .member .member-info p {
     font-style: italic;
-    font-size: 14px;
+    font-size: 1.4rem;
     padding-top: 15px;
     line-height: 26px;
     color: #5e5e5e;
@@ -689,6 +719,10 @@ section {
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
+
+.contact  .section-header h2.title {
+margin: auto;
+}
 
 .contact .php-email-form {
     background: transparent;
@@ -740,7 +774,7 @@ section {
 .contact .php-email-form textarea {
 
     font-family: SVN-Gilroy;
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: 400;
     line-height: 22px;
     letter-spacing: 0.05em;
@@ -788,7 +822,7 @@ section {
     border-radius: 5px;
 
     font-family: Constructio Grotesk;
-    font-size: 24px;
+    font-size: 2.4rem;
     font-weight: 400;
     line-height: 67px;
     letter-spacing: 0.1em;
