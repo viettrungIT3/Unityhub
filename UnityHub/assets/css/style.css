@@ -199,12 +199,12 @@ section {
   * Desktop Navigation 
   */
 .navbar {
-    padding: 0;
+    padding-right: 10%;
 }
 
 .navbar ul {
     margin: 0;
-    padding: 0;
+    padding-right: 0;
     display: flex;
     list-style: none;
     align-items: center;
@@ -212,6 +212,7 @@ section {
 
 .navbar li {
     position: relative;
+    letter-spacing: 2px;
 }
 
 .navbar a,
@@ -221,8 +222,8 @@ section {
     justify-content: space-between;
     padding: 10px 0 10px 65px;
     font-family: "Constructio Grotesk", sans-serif;
-    font-size: 16pt;
-    font-weight: 700;
+    font-size: 16px;
+    font-weight: 400;
     color: #fff;
     white-space: nowrap;
     transition: 0.3s;
@@ -325,6 +326,7 @@ section {
     height: 100vh;
     background: url(../img/hero-bg-1.png) top center no-repeat;
     background-size: cover;
+    letter-spacing: 4px;
 }
 
 .hero h1 {
@@ -397,6 +399,33 @@ section {
     text-align: center;
 }
 
+@media (max-width: 768px) {
+    .about .content{
+        padding:0 40px;
+        text-align: justify;
+    }
+    .about .content > h1 {
+        font-size: 32px;
+    }
+}
+
+/* @media (max-width: 991px) {
+    .hero {
+        height: auto;
+        padding: 120px 0 60px 0;
+    }
+} */
+
+@media (max-width: 480px) {
+    .about .content {
+        height: auto;
+        padding:0 12px;
+        text-align: justify;
+    }
+    .about .content > h1 {
+        font-size: 26px;
+    }
+}
 .about .h1-title {
     position: absolute;
     left: 50%;
