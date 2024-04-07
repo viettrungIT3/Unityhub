@@ -24,6 +24,7 @@
     <link href="assets/css/portfolio.css" rel="stylesheet" />
     <link href="assets/css/our-team.css" rel="stylesheet" />
     <link href="assets/css/our-benefit.css" rel="stylesheet" />
+    <link href="assets/css/modal.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -203,7 +204,7 @@
                                     <div class="profile">
                                         <h4>Partner</h4>
                                         <h3 class="text-uppercase">Centralized Exchanges</h3>
-                                        <button type="button" class="btn btn-primary">Show more</button>
+                                        <button type="button" class="btn btn-primary btn-open-modal" onclick="openModal(1-1)">Show more</button>
                                     </div>
                                 </div>
                             </div>
@@ -212,7 +213,7 @@
                                     <div class="profile">
                                         <h4>Partner</h4>
                                         <h3 class="text-uppercase">Launchpad</h3>
-                                        <button type="button" class="btn btn-primary">Show more</button>
+                                        <button type="button" class="btn btn-primary btn-open-modal" onclick="openModal(2-1)">Show more</button>
                                     </div>
                                 </div>
                             </div>
@@ -221,7 +222,7 @@
                                     <div class="profile">
                                         <h4>Partner</h4>
                                         <h3 class="text-uppercase">audit party</h3>
-                                        <button type="button" class="btn btn-primary">Show more</button>
+                                        <button type="button" class="btn btn-primary btn-open-modal" onclick="openModal(3-1)">Show more</button>
                                     </div>
                                 </div>
                             </div>
@@ -230,7 +231,7 @@
                                     <div class="profile">
                                         <h4>Partner</h4>
                                         <h3 class="text-uppercase">MM partner</h3>
-                                        <button type="button" class="btn btn-primary">Show more</button>
+                                        <button type="button" class="btn btn-primary btn-open-modal" onclick="openModal(4-1)">Show more</button>
                                     </div>
                                 </div>
                             </div>
@@ -239,7 +240,7 @@
                                     <div class="profile">
                                         <h4>Partner</h4>
                                         <h3 class="text-uppercase">media provider</h3>
-                                        <button type="button" class="btn btn-primary">Show more</button>
+                                        <button type="button" class="btn btn-primary btn-open-modal" onclick="openModal(5-1)">Show more</button>
                                     </div>
                                 </div>
                             </div>
@@ -248,7 +249,7 @@
                                     <div class="profile">
                                         <h4>Partner</h4>
                                         <h3 class="text-uppercase">kols / caller</h3>
-                                        <button type="button" class="btn btn-primary">Show more</button>
+                                        <button type="button" class="btn btn-primary btn-open-modal" onclick="openModal(6-1)">Show more</button>
                                     </div>
                                 </div>
                             </div>
@@ -558,6 +559,22 @@
         </section>
     </main>
 
+    <div id="modal" class="modal fade" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+                <img src="assets/img/ic-close.svg"  class="btn-close" data-bs-dismiss="modal" aria-label="Close" alt="Close">
+            </div>
+            <div class="modal-body">
+                <h5 id="modal-title" class="modal-title text-uppercase">Error...</h5>
+                <div id="modal-images-container" class="row">
+                    <p>Error...</p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
             class="bi bi-arrow-up-short"></i></a>
 
@@ -567,7 +584,9 @@
     <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
+    <script src="assets/js/config.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/modal.js"></script>
 </body>
 
 </html>
