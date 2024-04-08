@@ -226,8 +226,13 @@ section {
     justify-content: space-between;
     padding: 10px 0 10px 65px;
     font-family: "Constructio Grotesk", sans-serif;
+    font-family: Constructio Grotesk;
     font-size: 1.6rem;
     font-weight: 400;
+    line-height: 2.4rem;
+    letter-spacing: 0.05em;
+    text-align: left;
+
     color: #fff;
     white-space: nowrap;
     transition: 0.3s;
@@ -311,7 +316,7 @@ section {
 .navbar-mobile a,
 .navbar-mobile a:focus {
     padding: 10px 20px;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     color: #012970;
 }
 
@@ -418,14 +423,11 @@ section {
     text-align: center;
 }
 
-@media (max-width: 768px) {
+
+@media (max-width: 991px) {
     .about .content {
         padding: 20px 40px;
         text-align: justify;
-    }
-
-    .about .content>h1 {
-        font-size: 3.2rem;
     }
 }
 
@@ -719,9 +721,21 @@ section {
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
+.contact .container {
+    background: url('../img/bg-contact.png') center center no-repeat;
+    background-size: contain;
+}
 
-.contact  .section-header h2.title {
-margin: auto;
+.contact .section-header {
+    background: url('../img/bg-text-contact.png') center center no-repeat;
+    background-size: contain;
+    padding: 40px 0;
+    max-width: 848px;
+    margin: 0 auto;
+}
+
+.contact .section-header h2.title {
+    margin: auto;
 }
 
 .contact .php-email-form {

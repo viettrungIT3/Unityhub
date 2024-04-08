@@ -50,9 +50,9 @@
 
 .testimonials .testimonial-item h3 {
   font-family: "Constructio Grotesk";
-  font-size: 36px;
+  font-size: 3.2rem;
   font-weight: 400;
-  line-height: 41px;
+  line-height: 3.6rem;
   letter-spacing: 0.1em;
   text-align: center;
 }
@@ -105,7 +105,7 @@
   opacity: 1;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 991px) {
   .swiper-slide.swiper-slide-next {
     transform: scale(1.12);
   }
