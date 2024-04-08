@@ -1,9 +1,21 @@
 #our-benefit .section-header h2 {
   background: url(../img/line.png) bottom left no-repeat;
   background-size: 72% 2px;
-  padding-bottom: 11px;
-  
   width: fit-content;
+}
+
+
+@media screen and (max-width: 1201px) {
+  #our-benefit .section-header {
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+  }
+
+  #our-benefit .section-header h2.title {
+    background: url(../img/line.png) bottom center no-repeat;
+    background-size: 72% 2px;
+  }
 }
 
 
@@ -22,7 +34,7 @@
   isolation: isolate;
   display: inline-grid;
   place-content: center;
-  min-height: 104px;
+  min-height: 110px;
   font-family: SVN-Gilroy;
   font-size: 1.6rem;
   font-weight: 400;

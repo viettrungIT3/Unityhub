@@ -1,1 +1,1 @@
-sass --sourcemap=none --watch scss:css
+sass --no-source-map --watch scss:css

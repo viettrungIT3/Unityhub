@@ -76,7 +76,7 @@ h6 {
   # Sections
   --------------------------------------------------------------*/
 section {
-    padding: 60px 0;
+    padding: 80px 0 60px;
     overflow: hidden;
 }
 
@@ -123,10 +123,31 @@ section {
     color: #012970;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
+
+    .section-header h2,
+    .section-header h2.title {
+        font-size: 3.6rem;
+        line-height: 5.4rem;
+    }
+
     .section-header p {
         font-size: 2.8rem;
-        line-height: 32px;
+        line-height: 33px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .section-header h2,
+    .section-header h2.title {
+        font-size: 2.8rem;
+        line-height: 4.2rem;
+    }
+
+    .section-header p {
+        font-size: 2.4rem;
+        line-height: 28px;
     }
 }
 
@@ -278,7 +299,13 @@ section {
     }
 
     .header .logo img {
-        max-height: 80px;
+        max-height: 6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header .logo img {
+        max-height: 5rem;
     }
 }
 
@@ -385,20 +412,53 @@ section {
         height: auto;
         padding: 120px 0 60px 0;
     }
+
+    .hero h1 {
+        font-size: 4.8rem;
+        line-height: 5.7rem;
+    }
+
+    .hero h2 {
+        font-size: 3.0rem;
+        line-height: 4.5rem;
+    }
+
+    .hero h3 {
+        font-size: 2.8rem;
+        line-height: 4.2rem;
+    }
 }
 
 @media (max-width: 768px) {
-    .hero {
-        text-align: center;
-    }
-
-    /* .hero h1 {
-        font-size: 3.2rem;
+    .hero h1 {
+        font-size: 4.0rem;
+        line-height: 4.8rem;
     }
 
     .hero h2 {
         font-size: 2.4rem;
-    } */
+        line-height: 3.6rem;
+    }
+
+    .hero h3 {
+        font-size: 2.0rem;
+        line-height: 3.0rem;
+    }
+}
+
+@media (max-width: 425px) {
+    .hero h1 {
+        font-size: 3.2rem;
+        line-height: 4rem;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero h3 {
+        font-size: 1.8rem;
+    }
 }
 
 .section-1 {
@@ -426,7 +486,7 @@ section {
 
 @media (max-width: 991px) {
     .about .content {
-        padding: 20px 40px;
+        padding: 40px;
         text-align: justify;
     }
 }
@@ -441,7 +501,7 @@ section {
 @media (max-width: 480px) {
     .about .content {
         height: auto;
-        padding: 0 12px;
+        padding: 20px;
         text-align: justify;
     }
 
@@ -481,6 +541,36 @@ section {
     line-height: 22px;
     letter-spacing: 0.05em;
     text-align: center;
+}
+
+@media (max-width: 991px) {
+    .about .h1-title {
+        font-size: 3.6rem;
+        line-height: 5.4rem;
+        padding-top: 50px;
+        padding-bottom: 8px;
+    }
+
+    .about p {
+        font-size: 14px;
+        line-height: 20px;
+        padding-top: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about .h1-title {
+        font-size: 2.8rem;
+        line-height: 4.2rem;
+        padding-top: 40px;
+        padding-bottom: 6px;
+    }
+
+    .about p {
+        font-size: 12px;
+        line-height: 18px;
+        padding-top: 40px;
+    }
 }
 
 /*--------------------------------------------------------------
@@ -732,8 +822,14 @@ section {
     padding: 40px 0;
     max-width: 848px;
     margin: 0 auto;
+    background-position-y: 23px;
 }
 
+@media screen and (max-width: 767px) {
+    .contact .section-header {
+        background-position-y: 34px;
+    }
+} 
 .contact .section-header h2.title {
     margin: auto;
 }
@@ -838,12 +934,16 @@ section {
     font-family: Constructio Grotesk;
     font-size: 2.4rem;
     font-weight: 400;
-    line-height: 67px;
     letter-spacing: 0.1em;
-    text-align: left;
 
     background: #00B0F0;
 
+}
+
+@media screen and (max-width: 768px) {
+    .contact .php-email-form button[type=submit] {
+        font-size: 1.8rem;
+    }
 }
 
 .contact .php-email-form button[type=submit]:hover {
