@@ -3,16 +3,14 @@ document.addEventListener("DOMContentLoaded", function () {
   form.addEventListener("submit", function (e) {
     e.preventDefault(); // Ngăn chặn hành vi mặc định của form khi submit
 
-    // Hiển thị loading và ẩn thông báo
-    // document.querySelector(".loading").style.display = "block";
-    // document.querySelector(".error-message").style.display = "none";
-    // document.querySelector(".sent-message").style.display = "none";
-
     const formData = new FormData(form);
     const formDataObject = Object.fromEntries(formData.entries());
 
+    var loading = document.getElementById("loading-overlay");
+    loading.classList.add("is-active");
+
     fetch(
-      "https://script.google.com/macros/s/AKfycbx6McxS7OaxZbaoxJAGoUMQ2eI-Qfps2QB0h3Wox0vnPmPhvuFTEcLrIPNHB1MtQpQ/exec",
+      "https://script.google.com/macros/s/AKfycbxUGl7G9kDJaHQyesVhhA1SJfpTusDUZEAwrO2d1DA758pcIRypbFRMInwYMV6kZQvSEA/exec",
       {
         method: "POST",
         mode: "no-cors",
@@ -23,18 +21,16 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     )
       .then((response) => {
-        // document.querySelector(".loading").style.display = "none"; // Ẩn loading
+        loading.classList.remove("is-active");
 
         var myModal = new bootstrap.Modal(
           document.getElementById("modalSendContact")
         );
         myModal.show();
+        form.reset();
       })
       .catch((error) => {
-        // Hiển thị thông báo lỗi
-        // document.querySelector(".error-message").style.display = "block";
-        // document.querySelector(".error-message").textContent =
-        //   "An error occurred. Please try again.";
+        loading.classList.remove("is-active");
       });
   });
 });

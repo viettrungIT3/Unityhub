@@ -2,19 +2,21 @@
 ### Cấu hình App Script:
 ```js
 function doPost(e) {
-  var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Contact"); 
-  var data = [];
-  data.push(new Date()); 
-  data.push(e.parameter.email);
-  data.push(e.parameter.telegram);
-  data.push(e.parameter.project);
-  data.push(e.parameter.proposal);
-  
-  sheet.appendRow(data); // Thêm dữ liệu vào bảng tính
+  var data = JSON.parse(e.postData.contents);
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Contact");
+  var rowData = [];
 
-  // Trả về phản hồi cho người dùng
+  rowData.push(new Date());
+  rowData.push(data.email);
+  rowData.push(data.telegram);
+  rowData.push(data.project);
+  rowData.push(data.proposal);
+
+  sheet.appendRow(rowData);
+
   return ContentService
-    .createTextOutput(JSON.stringify({"result":"success", "data": e.parameters}))
+    .createTextOutput(JSON.stringify({"result": "success", "data": data}))
     .setMimeType(ContentService.MimeType.JSON);
 }
+
 ```
