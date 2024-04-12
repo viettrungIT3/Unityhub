@@ -72,6 +72,9 @@ h6 {
     font-family: "Constructio Grotesk", sans-serif;
 }
 
+
+
+
 /*--------------------------------------------------------------
   # Sections
   --------------------------------------------------------------*/
@@ -353,6 +356,55 @@ section {
     color: #4154f1;
 }
 
+@media screen and (max-width: 575px) {
+    .container {
+        padding: 0px 20px;
+    }
+
+    .row-our {
+        display: none !important;
+    }
+
+    .slider-our {
+        display: block !important;
+        position: relative;
+        margin: 0 10px;
+        text-align: center;
+        padding: 0 30px;
+    }
+
+    .slider-our .featured {
+        font-size: 12px !important;
+        min-width: 126px !important;
+        line-height: 50px !important;
+    }
+
+    .slider-our .member-info--title {
+        font-size: 18px !important;
+    }
+
+    .slider-our .member-info {
+        left: 55% !important;
+    }
+
+    .slider-our  .socials img {
+        width: 30px !important;
+        height: 30px !important;
+    }
+
+    .slider-our .box {
+        margin: 0 10px !important;
+    }
+}
+
+.row-our {
+    display: flex;
+}
+
+.slider-our {
+    display: none;
+}
+
 
 /*--------------------------------------------------------------
   # Hero Section
@@ -363,6 +415,24 @@ section {
     background: url(../img/hero-bg-1.png) top center no-repeat;
     background-size: cover;
     letter-spacing: 4px;
+}
+
+@media screen and (max-width: 767px) {
+    .hero {
+        height: 800px !important;
+        background: url(../img/hero-bg-2.png) top center no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .align-items-center {
+        align-items: unset !important;
+    }
+
+    .hero h1,
+    .hero h2,
+    .hero h3 {
+        text-align: center !important;
+    }
 }
 
 .hero h1 {
@@ -465,10 +535,33 @@ section {
     width: 100%;
     height: auto;
     background: url(../img/section-1-bg.png) top center no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
     padding: 0px;
     margin-top: 61px;
     background-position-y: 62px;
+    overflow: unset;
+}
+
+@media screen and (max-width: 1199px) {
+    .section-1 {
+        overflow: hidden;
+    }
+
+}
+
+#portfolio {
+    background: url(../img/section-1-bg.png) top center no-repeat;
+    background-size: 100% 100%;
+    padding: 0 !important;
+}
+
+#portfolio .container {
+    padding: 80px 0 200px;
+}
+
+#our-team {
+    margin-top: -40px;
+    padding: 0 0 60px !important;
 }
 
 .about {
@@ -576,6 +669,10 @@ section {
 /*--------------------------------------------------------------
 # Features
 --------------------------------------------------------------*/
+.features {
+    overflow: unset;
+}
+
 .features .section-header {
     text-align: left;
     padding-bottom: 0;
@@ -744,32 +841,8 @@ section {
     z-index: 1;
 }
 
-.team .member .social {
-    position: absolute;
-    right: -100%;
-    top: 30px;
-    opacity: 0;
-    border-radius: 4px;
-    transition: 0.5s;
-    background: rgba(255, 255, 255, 0.3);
-    z-index: 2;
-}
-
-.team .member .social a {
-    transition: color 0.3s;
-    color: rgba(1, 41, 112, 0.5);
-    margin: 15px 12px;
-    display: block;
-    line-height: 0;
-    text-align: center;
-}
-
-.team .member .social a:hover {
-    color: rgba(1, 41, 112, 0.8);
-}
-
-.team .member .social i {
-    font-size: 1.8rem;
+.socials a:hover img {
+    transform: scale(1.1);
 }
 
 .team .member .member-info {
@@ -803,17 +876,12 @@ section {
     box-shadow: 0px 0 30px rgba(1, 41, 112, 0.1);
 }
 
-.team .member:hover .social {
-    right: 8px;
-    opacity: 1;
-}
-
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
-.contact .container {
-    background: url('../img/bg-contact.png') center center no-repeat;
-    background-size: contain;
+.contact {
+    background: url('../img/bg-contact.png') bottom center no-repeat;
+    background-size: 100%;
 }
 
 .contact .section-header {
@@ -829,7 +897,14 @@ section {
     .contact .section-header {
         background-position-y: 34px;
     }
-} 
+}
+
+@media screen and (max-width: 991px) {
+    .contact {
+        background: unset;
+    }
+}
+
 .contact .section-header h2.title {
     margin: auto;
 }
