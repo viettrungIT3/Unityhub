@@ -195,10 +195,10 @@
     new Swiper('.testimonials-slider', {
         speed: 600,
         loop: true,
-        // autoplay: {
-        //     delay: 5000,
-        //     disableOnInteraction: true
-        // },
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: true
+        },
         slidesPerView: 'auto',
         navigation: {
           nextEl: '.ct-swiper-button-next',

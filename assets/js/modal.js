@@ -10,7 +10,7 @@ function openModal(index) {
 
   config.images.forEach((image) => {
     var col = document.createElement("div");
-    col.className = "item-image col-6 col-md-4 col-lg-3 d-flex justify-content-center align-items-center";
+    col.className = "item-image col-4 col-md-4 col-lg-3 d-flex justify-content-center align-items-center";
     col.innerHTML = `<img src="${image}" class="img-fluid">`;
     modalImageContainer.appendChild(col);
   });

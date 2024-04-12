@@ -187,6 +187,31 @@ section {
     opacity: 1;
 }
 
+
+
+.twiter-logo {
+    position: fixed;
+    visibility: visible;
+    opacity: 1;
+    right: 15px;
+    bottom: 75px;
+    z-index: 99999;
+    background: transparent;
+    width: 70px;
+    height: 70px;
+    border-radius: 4px;
+    transition: all 0.4s;
+}
+
+.twiter-logo img {
+    width: 100%;
+}
+
+.twiter-logo:hover img {
+    transform: scale(1.1);
+}
+
+
 /*--------------------------------------------------------------
   # Disable aos animation delay on mobile devices
   --------------------------------------------------------------*/
@@ -205,6 +230,10 @@ section {
     padding: 20px 0;
 }
 
+.header-fixed {
+    padding: 5px 0 !important;
+}
+
 .header.header-scrolled {
     background: #000A39;
     padding: 15px 0;
@@ -218,6 +247,10 @@ section {
 .header .logo img {
     max-height: 123px;
     margin-right: 6px;
+}
+
+.header-scrolled .logo img {
+    max-height: 70px;
 }
 
 /*--------------------------------------------------------------
@@ -387,7 +420,7 @@ section {
         left: 55% !important;
     }
 
-    .slider-our  .socials img {
+    .slider-our .socials img {
         width: 30px !important;
         height: 30px !important;
     }
