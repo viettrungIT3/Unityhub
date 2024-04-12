@@ -531,22 +531,22 @@
                                 <div class="row gy-4">
 
                                     <div class="col-md-6 ">
-                                        <input type="email" class="form-control" name="email" placeholder="Email"
+                                        <input type="email" class="form-control" value="test@gmail.com" name="email" placeholder="Email"
                                             required>
                                     </div>
 
                                     <div class="col-md-6">
-                                        <input type="text" name="telegram" class="form-control" placeholder="Telegram"
+                                        <input type="text" name="telegram" value="test" class="form-control" placeholder="Telegram"
                                             required>
                                     </div>
 
                                     <div class="col-md-12">
-                                        <input type="text" class="form-control" name="project"
+                                        <input type="text" class="form-control" value="test" name="project"
                                             placeholder="Project name" required>
                                     </div>
 
                                     <div class="col-md-12">
-                                        <input type="text" class="form-control" name="proposal"
+                                        <input type="text" class="form-control" value="test" name="proposal"
                                             placeholder="Your proposal" required>
                                     </div>
 
@@ -575,15 +575,27 @@
     <div id="modal" class="modal fade" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
-                <div class="modal-header d-flex justify-content-end">
-                    <img src="assets/img/ic-close.svg" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
-                        alt="Close">
-                </div>
                 <div class="modal-body d-flex flex-column align-items-center">
+                    <img src="assets/img/ic-close.svg" class="btn-close-modal" data-bs-dismiss="modal" aria-label="Close"
+                        alt="Close">
                     <h5 id="modal-title" class="modal-title text-uppercase">Error...</h5>
                     <div id="modal-images-container" class="row d-flex justify-content-center align-items-center">
                         <p>Error...</p>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modalSendContact" class="modal fade" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body d-flex flex-column align-items-center">
+                    <img src="assets/img/ic-close.svg" class="btn-close-modal" data-bs-dismiss="modal" aria-label="Close"
+                        alt="Close">
+                    <div id="modal-images-container" class="row d-flex justify-content-center align-items-center">
+                        <img src="./assets/img/ic-send-contact-success.png" alt="">
+                    </div>
+                    <h5 id="modal-title" class="modal-title text-uppercase">success</h5>
                 </div>
             </div>
         </div>

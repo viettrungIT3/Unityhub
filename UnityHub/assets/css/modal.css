@@ -1,15 +1,16 @@
-#modal .modal-dialog-centered .modal-content {
+.modal-content {
   box-shadow: 8px 10px 15px 2px #00000066;
   min-height: 313px;
   transition: 0.3s;
   position: relative;
   box-sizing: border-box;
   color: #fff;
-  background: #001e60;
+  background: rgba(0, 30, 96, 0.86);
   background-clip: padding-box;
   border: solid 2px transparent;
 }
-#modal .modal-dialog-centered .modal-content:before {
+
+.modal-content::before {
   content: "";
   position: absolute;
   top: 0;
@@ -28,43 +29,62 @@
     #009fdc 100%
   );
 }
-#modal .modal-dialog-centered .modal-content .modal-header {
+
+
+.modal .modal-dialog-centered .modal-content .modal-header {
   border: none;
 }
+
+.modal .btn-close-modal {
+  position: absolute;
+  top: 28px;
+  right: 29px;
+  width: 28px;
+}
+
 #modal .modal-dialog-centered .modal-content .modal-body .modal-title {
   background: url(../img/line.png) bottom center no-repeat;
   background-size: 85% 2px;
-  padding-bottom: 11px;
+  padding-bottom: 24px;
   color: #fff;
   font-family: Constructio Grotesk;
   font-size: 3.6rem;
   font-weight: 400;
-  line-height: 4.1rem;
   letter-spacing: 0.1em;
   text-align: center;
   width: fit-content;
-  margin: auto;
+  margin: 73px auto 0;
 }
-#modal
-  .modal-dialog-centered
-  .modal-content
-  .modal-body
-  #modal-images-container {
 
-  margin: 0 82px 30px;
+#modal .modal-dialog-centered .modal-content .modal-body #modal-images-container {
+
+  margin: 17px 82px 46px;
 }
-#modal
-  .modal-dialog-centered
-  .modal-content
-  .modal-body
-  #modal-images-container
-  .item-image {
+
+#modal .modal-dialog-centered .modal-content .modal-body #modal-images-container .item-image {
   margin-top: 24px;
 }
+
 @media (min-width: 992px) {
   #modal .modal-dialog {
     min-width: 960px;
   }
+
+  #modalSendContact .modal-dialog {
+    min-width: 713px;
+  }
 }
 
+#modalSendContact #modal-images-container img {
+  width: 180px;
+  margin: 150px auto 36px;
+}
 
+#modalSendContact #modal-title {
+  font-family: Constructio Grotesk;
+  font-size: 3.6rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-align: center;
+  margin-bottom: 125px;
+}
